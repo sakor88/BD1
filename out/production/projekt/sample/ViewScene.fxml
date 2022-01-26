@@ -21,52 +21,52 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="465.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport3Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Zamówienia&#10;na nowy &#10;samochód" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="ZamNowSamViewButton" layoutX="465.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNowZamViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Zamówienia&#10;na nowy &#10;samochód" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="297.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport2Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Usługi&#10;serwisowe" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="UslSerwViewButton" layoutX="297.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToUslSerwViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Usługi&#10;serwisowe" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="125.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport1Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;w serwisie" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="SamSerwViewButton" layoutX="125.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSamSerwViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;w serwisie" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="464.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport3Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Zespoły &#10;napędowe" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="NapedViewButton" layoutX="464.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNapedViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Zespoły &#10;napędowe" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="280.0" layoutY="533.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport2Scene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Konfiguracje &#10;samochodów &#10;nowych" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="NowSamViewButton" layoutX="280.0" layoutY="533.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNowSamViewScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Konfiguracje &#10;samochodów &#10;nowych" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="126.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport1Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;używane" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="UzywSamViewButton" layoutX="126.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToUzywSamViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;używane" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="467.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport3Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Serwisanci" textFill="WHITE">
+      <Button fx:id="SerwisanciViewButton" layoutX="467.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSerwisanciViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Serwisanci" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="299.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport2Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Sprzedawcy" textFill="WHITE">
+      <Button fx:id="SprzedawcyViewButton" layoutX="299.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSprzedawcyViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Sprzedawcy" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="127.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport1Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Klienci" textFill="WHITE">
+      <Button id="KlienciViewButton" fx:id="KlienciViewButton" layoutX="127.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToKlienciViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Klienci" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="298.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport2Scene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Pakiety &#10;wyposażenia&#10;" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="WypViewButton" layoutX="298.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToWypViewScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Pakiety &#10;wyposażenia&#10;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>

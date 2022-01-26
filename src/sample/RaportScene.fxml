@@ -16,7 +16,7 @@
             <Font name="Times New Roman Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="162.0" layoutY="307.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="44.0" prefWidth="275.0" style="-fx-background-color: #3434c4;" text="Powrót do ekranu głównego" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="162.0" layoutY="307.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="44.0" prefWidth="275.0" style="-fx-background-color: #6434c4;" text="Powrót do ekranu głównego" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
