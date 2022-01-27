@@ -24,6 +24,40 @@ public class Controller {
     private Scene scene;
     private Stage stage;
 
+    // ------------------ Polaczenie z bazą ------------------
+
+    public Connection getConnection() {
+
+        System.out.println("Sprawdzenie czy sterownik jest zarejestrowany w menadzerze");
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException cnfe) {
+            System.out.println("Nie znaleziono sterownika!");
+            System.out.println("Wyduk sledzenia bledu i zakonczenie.");
+            cnfe.printStackTrace();
+            System.exit(1);
+        }
+        System.out.println("Zarejstrowano sterownik - OK, kolejny krok nawiazanie polaczenia z baza danych.");
+
+        Connection conn = null;
+
+        try {
+            String url = "jdbc:postgresql://tyke.db.elephantsql.com:5432/btzzzahi";
+            String username = "btzzzahi";
+            String password = "WjXcJGCobr0VAVpBbAA1TaO-L8wtwiBF";
+
+            conn = DriverManager.getConnection(url,username,password);
+            System.out.println("Udalo Sie połączyć z bazą danych!");
+            return conn;
+        } catch (SQLException se) {
+            System.out.println("Brak polaczenia z baza danych, wydruk logu sledzenia i koniec.");
+            se.printStackTrace();
+            System.exit(1);
+        }
+        return null;
+    }
+
+
     // ------------------ Kolumny FXML ------------------
 
     // Klient  --------
@@ -89,6 +123,9 @@ public class Controller {
     // SamochodSerwis  --------
 
     @FXML
+    private TableView<SamochodSerwis> SamochodSerwisTable;
+
+    @FXML
     private TableColumn<SamochodSerwis,Integer> colSamochodSerwisNrRej ;
 
     @FXML
@@ -99,6 +136,9 @@ public class Controller {
 
 
     // SamochodUzywany  --------
+
+    @FXML
+    private TableView<SamochodUzywany> SamochodUzywanyTable;
 
     @FXML
     private TableColumn<SamochodUzywany,Integer> colSamochodUzywanyId;
@@ -131,6 +171,9 @@ public class Controller {
     // Serwisant  --------
 
     @FXML
+    private TableView<Serwisant> SerwisantTable;
+
+    @FXML
     private TableColumn<Serwisant,Integer> colSerwisantId;
 
     @FXML
@@ -147,6 +190,9 @@ public class Controller {
 
 
     // Sprzedawca --------
+
+    @FXML
+    private TableView<Sprzedawca> SprzedawcaTable;
 
     @FXML
     private TableColumn<Sprzedawca,Integer> colSprzedawcaId;
@@ -167,6 +213,9 @@ public class Controller {
     // UslugaSerwis--------
 
     @FXML
+    private TableView<UslugaSerwis> UslugaSerwisTable;
+
+    @FXML
     private TableColumn<UslugaSerwis,Integer> colUslugaSerwisId;
 
     @FXML
@@ -182,6 +231,9 @@ public class Controller {
     // Wyposazenie --------
 
     @FXML
+    private TableView<Wyposazenie> WyposazenieTable;
+
+    @FXML
     private TableColumn<Wyposazenie,Integer> colWyposazenieId;
 
     @FXML
@@ -191,6 +243,9 @@ public class Controller {
     private TableColumn<Wyposazenie,String> colWyposazenieWersja;
 
     // ZamowienieNowe --------
+
+    @FXML
+    private TableView<ZamowienieNowe> ZamowienieNoweTable;
 
     @FXML
     private TableColumn<ZamowienieNowe,Integer> colZamowienieNoweId;
@@ -208,40 +263,7 @@ public class Controller {
     private TableColumn<ZamowienieNowe,Integer> colZamowienieNoweCena;
 
 
-    // ------------------ Polaczenie z bazą ------------------
 
-
-
-    public Connection getConnection() {
-
-        System.out.println("Sprawdzenie czy sterownik jest zarejestrowany w menadzerze");
-        try {
-        Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException cnfe) {
-        System.out.println("Nie znaleziono sterownika!");
-        System.out.println("Wyduk sledzenia bledu i zakonczenie.");
-        cnfe.printStackTrace();
-        System.exit(1);
-        }
-        System.out.println("Zarejstrowano sterownik - OK, kolejny krok nawiazanie polaczenia z baza danych.");
-
-        Connection conn = null;
-
-        try {
-            String url = "jdbc:postgresql://tyke.db.elephantsql.com:5432/btzzzahi";
-            String username = "btzzzahi";
-            String password = "WjXcJGCobr0VAVpBbAA1TaO-L8wtwiBF";
-
-            conn = DriverManager.getConnection(url,username,password);
-            System.out.println("Udalo Sie połączyć z bazą danych!");
-            return conn;
-        } catch (SQLException se) {
-            System.out.println("Brak polaczenia z baza danych, wydruk logu sledzenia i koniec.");
-            se.printStackTrace();
-            System.exit(1);
-        }
-        return null;
-    }
 
     // -------------- Wyświetlanie Klient ---------------
 
@@ -283,6 +305,8 @@ public class Controller {
         KlientTable.setItems(klientList);
     }
 
+    // -------------- Wyświetlanie Naped ---------------
+
     public ObservableList<Naped> getNapedList(){
         ObservableList<Naped> napedList = FXCollections.observableArrayList();
         Connection conn = getConnection();
@@ -320,6 +344,8 @@ public class Controller {
         NapedTable.setItems(napedList);
     }
 
+    // -------------- Wyświetlanie SamochodNowy ---------------
+
     public ObservableList<SamochodNowy> getSamochodNowyList(){
         ObservableList<SamochodNowy> SamochodNowyList = FXCollections.observableArrayList();
         Connection conn = getConnection();
@@ -330,10 +356,10 @@ public class Controller {
         try{
             st = conn.createStatement();
             rs = st.executeQuery(query);
-            SamochodNowy SamochodNowy;
+            SamochodNowy samochodNowy;
             while(rs.next()) {
-                SamochodNowy = new SamochodNowy(rs.getInt("id_samochod_nowy"), rs.getInt("id_wyposazenie"), rs.getString("model"), rs.getString("marka"));
-                SamochodNowyList.add(SamochodNowy);
+                samochodNowy = new SamochodNowy(rs.getInt("id_samochod_nowy"), rs.getInt("id_wyposazenie"), rs.getString("model"), rs.getString("marka"));
+                SamochodNowyList.add(samochodNowy);
             }
 
         }
@@ -354,8 +380,281 @@ public class Controller {
 
         SamochodNowyTable.setItems(samochodNowyList);
     }
+    
+    // -------------- Wyświetlanie ZamowienieNowe ---------------
+
+    public ObservableList<ZamowienieNowe> getZamowienieNoweList(){
+        ObservableList<ZamowienieNowe> zamowienieNoweList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.zamowienie_nowe";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            ZamowienieNowe zamowienieNowe;
+            while(rs.next()) {
+                zamowienieNowe = new ZamowienieNowe(rs.getInt("id_zam_nowe"), rs.getInt("id_klient"), rs.getInt("id_sprzedawca"), rs.getString("data_realizacji"), rs.getInt("cena"));
+                zamowienieNoweList.add(zamowienieNowe);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return zamowienieNoweList;
+    }
+
+    public void showZamowienieNowe(){
+
+        ObservableList<ZamowienieNowe> zamowienieNoweList = getZamowienieNoweList();
+
+        colZamowienieNoweId.setCellValueFactory(new PropertyValueFactory<ZamowienieNowe,Integer>("id_zam_nowe"));
+        colZamowienieNoweIdKlient.setCellValueFactory(new PropertyValueFactory<ZamowienieNowe,Integer>("id_klient"));
+        colZamowienieNoweIdSprzedawca.setCellValueFactory(new PropertyValueFactory<ZamowienieNowe,Integer>("id_sprzedawca"));
+        colZamowienieNoweDataRealizacji.setCellValueFactory(new PropertyValueFactory<ZamowienieNowe,String>("data_realizacji"));
+        colZamowienieNoweCena.setCellValueFactory(new PropertyValueFactory<ZamowienieNowe,Integer>("cena"));
+
+        ZamowienieNoweTable.setItems(zamowienieNoweList);
+    }
+
+    // -------------- Wyświetlanie SamochodSerwis ---------------
+
+    public ObservableList<SamochodSerwis> getSamochodSerwisList(){
+        ObservableList<SamochodSerwis> samochodSerwisList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.samochod_serwis";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            SamochodSerwis samochodSerwis;
+            while(rs.next()) {
+                samochodSerwis = new SamochodSerwis(rs.getString("nr_rej"), rs.getString("marka"), rs.getString("model") );
+                samochodSerwisList.add(samochodSerwis);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return samochodSerwisList;
+    }
+
+    public void showSamochodSerwis(){
+
+        ObservableList<SamochodSerwis> samochodSerwisList = getSamochodSerwisList();
+
+        colSamochodSerwisNrRej.setCellValueFactory(new PropertyValueFactory<SamochodSerwis,Integer>("nr_rej"));
+        colSamochodSerwisMarka.setCellValueFactory(new PropertyValueFactory<SamochodSerwis,String>("marka"));
+        colSamochodSerwisModel.setCellValueFactory(new PropertyValueFactory<SamochodSerwis,String>("model"));
 
 
+        SamochodSerwisTable.setItems(samochodSerwisList);
+    }
+
+    // -------------- Wyświetlanie SamochodUzywany ---------------
+
+    public ObservableList<SamochodUzywany> getSamochodUzywanyList(){
+        ObservableList<SamochodUzywany> samochodUzywanyList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.samochod_uzywany";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            SamochodUzywany samochodUzywany;
+            while(rs.next()) {
+                samochodUzywany = new SamochodUzywany(rs.getInt("id_samochod_uzywany"), rs.getInt("id_naped"), rs.getInt("przebieg"), rs.getString("marka"), rs.getBoolean("bezwypadkowosc"), rs.getInt("cena"), rs.getInt("rok_produkcji"), rs.getInt("nr_wlasciciela"), rs.getString("model"));
+                samochodUzywanyList.add(samochodUzywany);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return samochodUzywanyList;
+    }
+
+    public void showSamochodUzywany(){
+
+        ObservableList<SamochodUzywany> samochodUzywanyList = getSamochodUzywanyList();
+
+        colSamochodUzywanyId.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Integer>("id_samochod_uzywany"));
+        colSamochodUzywanyIdNaped.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Integer>("id_naped"));
+        colSamochodUzywanyPrzebieg.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Integer>("przebieg"));
+        colSamochodUzywanyMarka.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,String>("marka"));
+        colSamochodUzywanyBezwypadkowosc.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Boolean>("bezwypadkowosc"));
+        colSamochodUzywanyCena .setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Integer>("cena"));
+        colSamochodUzywanyRokProdukcji.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Integer>("rok_produkcji"));
+        colSamochodUzywanyNrWlasciciela.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,Integer>("nr_wlasciciela"));
+        colSamochodUzywanyModel.setCellValueFactory(new PropertyValueFactory<SamochodUzywany,String>("model"));
+        
+        SamochodUzywanyTable.setItems(samochodUzywanyList);
+    }
+
+
+    // -------------- Wyświetlanie Serwisant ---------------
+
+    public ObservableList<Serwisant> getSerwisantList(){
+        ObservableList<Serwisant> serwisantList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.serwisant";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            Serwisant serwisant;
+            while(rs.next()) {
+                serwisant = new Serwisant(rs.getInt("id_Serwisant"), rs.getString("imie"), rs.getString("nazwisko"), rs.getString("telefon"), rs.getString("email"));
+                serwisantList.add(serwisant);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return serwisantList;
+    }
+
+    public void showSerwisant(){
+
+        ObservableList<Serwisant> serwisantList = getSerwisantList();
+
+        //System.out.println("" + SerwisantList.get(0).getId_Serwisant());
+
+        colSerwisantId.setCellValueFactory(new PropertyValueFactory<Serwisant,Integer>("id_Serwisant"));
+        colSerwisantImie.setCellValueFactory(new PropertyValueFactory<Serwisant,String>("imie"));
+        colSerwisantNazwisko.setCellValueFactory(new PropertyValueFactory<Serwisant,String>("nazwisko"));
+        colSerwisantTelefon.setCellValueFactory(new PropertyValueFactory<Serwisant,String>("telefon"));
+        colSerwisantEmail.setCellValueFactory(new PropertyValueFactory<Serwisant,String>("email"));
+
+        SerwisantTable.setItems(serwisantList);
+    }
+
+    // -------------- Wyświetlanie Sprzedawca ---------------
+
+    public ObservableList<Sprzedawca> getSprzedawcaList(){
+        ObservableList<Sprzedawca> sprzedawcaList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.sprzedawca";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            Sprzedawca sprzedawca;
+            while(rs.next()) {
+                sprzedawca = new Sprzedawca(rs.getInt("id_Sprzedawca"), rs.getString("imie"), rs.getString("nazwisko"), rs.getString("telefon"), rs.getString("email"));
+                sprzedawcaList.add(sprzedawca);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return sprzedawcaList;
+    }
+
+    public void showSprzedawca(){
+
+        ObservableList<Sprzedawca> sprzedawcaList = getSprzedawcaList();
+
+        //System.out.println("" + SprzedawcaList.get(0).getId_Sprzedawca());
+
+        colSprzedawcaId.setCellValueFactory(new PropertyValueFactory<Sprzedawca,Integer>("id_Sprzedawca"));
+        colSprzedawcaImie.setCellValueFactory(new PropertyValueFactory<Sprzedawca,String>("imie"));
+        colSprzedawcaNazwisko.setCellValueFactory(new PropertyValueFactory<Sprzedawca,String>("nazwisko"));
+        colSprzedawcaTelefon.setCellValueFactory(new PropertyValueFactory<Sprzedawca,String>("telefon"));
+        colSprzedawcaEmail.setCellValueFactory(new PropertyValueFactory<Sprzedawca,String>("email"));
+
+        SprzedawcaTable.setItems(sprzedawcaList);
+    }
+
+    // -------------- Wyświetlanie Klient ---------------
+
+    public ObservableList<UslugaSerwis> getUslugaSerwisList(){
+        ObservableList<UslugaSerwis> uslugaSerwisList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.serwis_usluga";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            UslugaSerwis uslugaSerwis;
+            while(rs.next()) {
+                uslugaSerwis = new UslugaSerwis(rs.getInt("id_usluga"), rs.getString("nazwa"), rs.getFloat("czas_uslugi"), rs.getString("data"));
+                uslugaSerwisList.add(uslugaSerwis);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return uslugaSerwisList;
+    }
+
+    public void showUslugaSerwis(){
+
+        ObservableList<UslugaSerwis> uslugaSerwisList = getUslugaSerwisList();
+
+        //System.out.println("" + UslugaSerwisList.get(0).getId_UslugaSerwis());
+
+        colUslugaSerwisId.setCellValueFactory(new PropertyValueFactory<UslugaSerwis,Integer>("id_usluga"));
+        colUslugaSerwisNazwa.setCellValueFactory(new PropertyValueFactory<UslugaSerwis,String>("nazwa"));
+        colUslugaSerwisCzas.setCellValueFactory(new PropertyValueFactory<UslugaSerwis,Float>("czas_uslugi"));
+        colUslugaSerwisData.setCellValueFactory(new PropertyValueFactory<UslugaSerwis,String>("data"));
+
+        UslugaSerwisTable.setItems(uslugaSerwisList);
+    }
+
+    // -------------- Wyświetlanie Wyposazenie ---------------
+
+    public ObservableList<Wyposazenie> getWyposazenieList(){
+        ObservableList<Wyposazenie> wyposazenieList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT * FROM projekt.wyposazenie";
+        Statement st;
+        ResultSet rs;
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            Wyposazenie wyposazenie;
+            while(rs.next()) {
+                wyposazenie = new Wyposazenie(rs.getInt("id_wyposazenie"), rs.getInt("id_naped"), rs.getString("wersja_wyposazenia"));
+                wyposazenieList.add(wyposazenie);
+            }
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return wyposazenieList;
+    }
+
+    public void showWyposazenie(){
+
+        ObservableList<Wyposazenie> wyposazenieList = getWyposazenieList();
+
+        //System.out.println("" + WyposazenieList.get(0).getId_Wyposazenie());
+
+        colWyposazenieId.setCellValueFactory(new PropertyValueFactory<Wyposazenie,Integer>("id_wyposazenie"));
+        colWyposazenieIdNaped.setCellValueFactory(new PropertyValueFactory<Wyposazenie,Integer>("id_naped"));
+        colWyposazenieWersja.setCellValueFactory(new PropertyValueFactory<Wyposazenie,String>("wersja_wyposazenia"));
+
+        WyposazenieTable.setItems(wyposazenieList);
+    }
 
 
 
@@ -374,31 +673,31 @@ public class Controller {
     }
 
     public void SamochodSerwisClick(ActionEvent event) throws IOException{
-        //showSamochodSerwis();
+        showSamochodSerwis();
     }
 
     public void SamochodUzywanyClick(ActionEvent event) throws IOException{
-        //showSamochodUzywany();
+        showSamochodUzywany();
     }
 
     public void SerwisantClick(ActionEvent event) throws IOException{
-        //showSerwisant();
+        showSerwisant();
     }
 
     public void SprzedawcaClick(ActionEvent event) throws IOException{
-        //showSprzedawca();
+        showSprzedawca();
     }
 
     public void UslugaSerwisClick(ActionEvent event) throws IOException{
-        //showUslugaSerwis();
+        showUslugaSerwis();
     }
 
     public void WyposazenieClick(ActionEvent event) throws IOException{
-        //showWyposazenie();
+        showWyposazenie();
     }
 
     public void ZamowienieNoweClick(ActionEvent event) throws IOException{
-        //showZamowienieNowe();
+        showZamowienieNowe();
     }
 
     public void switchToRaportScene(ActionEvent event) throws IOException{
@@ -498,7 +797,7 @@ public class Controller {
     }
 
     public void switchToNowZamViewScene(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("./ViewScenes/NowSamView.fxml"));
+        root = FXMLLoader.load(getClass().getResource("./ViewScenes/NowZamView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
