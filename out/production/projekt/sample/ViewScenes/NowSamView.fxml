@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #576968;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="SamochodNowyClick" layoutX="696.0" layoutY="21.0" mnemonicParsing="false" onAction="#SamochodNowyClick" style="-fx-background-color: #6434c4;" text="Zaimportuj dane z bazy" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="663.0" layoutY="816.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="44.0" prefWidth="275.0" style="-fx-background-color: #6434c4;" text="Powrót do ekranu głównego" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="18.0" />
+            </font>
+        </Button>
+      <ScrollPane layoutX="46.0" layoutY="81.0" prefHeight="688.0" prefWidth="1518.0">
+         <content>
+            <TableView fx:id="SamochodNowyTable" prefHeight="1093.0" prefWidth="1716.0">
+              <columns>
+                <TableColumn fx:id="colSamochodNowyId" prefWidth="191.0" text="id_samochod_nowy" />
+                <TableColumn fx:id="colSamochodNowyIdWyposazenie" prefWidth="305.0" text="id_wyposazenie" />
+                  <TableColumn fx:id="colSamochodNowyModel" prefWidth="553.0" text="model" />
+                  <TableColumn fx:id="colSamochodNowyMarka" prefWidth="455.0" text="marka" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>
