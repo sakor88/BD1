@@ -918,6 +918,30 @@ public class Controller {
         stage.show();
     }
 
+    public void addKlient(ActionEvent event) throws IOException{
+        System.out.println("dziala");
+    }
+
+    public void addSerwisant(ActionEvent event) throws IOException{
+
+    }
+
+    public void addSprzedawca(ActionEvent event) throws IOException{
+
+    }
+
+    public void addNaped(ActionEvent event) throws IOException{
+
+    }
+
+    public void addNowZam(ActionEvent event) throws IOException{
+
+    }
+
+    public void addNowSam(ActionEvent event) throws IOException{
+
+    }
+
     // ------------------
 
 
