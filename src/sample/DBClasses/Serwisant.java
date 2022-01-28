@@ -2,6 +2,8 @@ package sample.DBClasses;
 
 public class Serwisant {
 
+    public static Integer id = 6;
+
     private Integer id_serwisant;
     private String imie;
     private String nazwisko;

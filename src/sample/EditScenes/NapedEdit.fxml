@@ -13,9 +13,9 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="225.0" layoutY="127.0" />
-      <TextField layoutX="225.0" layoutY="197.0" />
-      <TextField layoutX="225.0" layoutY="269.0" />
+      <TextField fx:id="napedKodTF" layoutX="225.0" layoutY="127.0" />
+      <TextField fx:id="napedMocTF" layoutX="225.0" layoutY="197.0" />
+      <TextField fx:id="napedSkrzyniaTF" layoutX="225.0" layoutY="269.0" />
       <Label layoutX="258.0" layoutY="99.0" prefHeight="20.0" prefWidth="87.0" text="Kod silnika" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
@@ -41,8 +41,8 @@
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Button>
-      <TextField layoutX="225.0" layoutY="345.0" />
-      <TextField layoutX="226.0" layoutY="425.0" />
+      <TextField fx:id="napedPojemnoscTF" layoutX="225.0" layoutY="345.0" />
+      <TextField fx:id="napedMomentTF" layoutX="226.0" layoutY="425.0" />
       <Label layoutX="256.0" layoutY="317.0" prefHeight="20.0" prefWidth="87.0" text="Pojemność" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />

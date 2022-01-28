@@ -2,6 +2,8 @@ package sample.DBClasses;
 
 public class Naped {
 
+    public static Integer id = 6;
+
     private Integer id_naped;
     private String kod_silnika;
     private Integer moc;

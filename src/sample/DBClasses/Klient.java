@@ -7,6 +7,8 @@ import sample.Controller;
 
 public class Klient {
 
+    public static Integer id = 16;
+
     private Integer id_klient;
     private String imie;
     private String nazwisko;

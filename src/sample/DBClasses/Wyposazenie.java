@@ -2,6 +2,8 @@ package sample.DBClasses;
 
 public class Wyposazenie {
 
+    public static Integer id = 6;
+
     private Integer id_wyposazenie;
     private Integer id_naped;
     private String wersja_wyposazenia;

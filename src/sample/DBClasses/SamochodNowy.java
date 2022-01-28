@@ -2,6 +2,8 @@ package sample.DBClasses;
 
 public class SamochodNowy {
 
+    public static Integer id = 6;
+
     private Integer  id_samochod_nowy;
     private Integer id_wyposazenie;
     private String model;

@@ -2,6 +2,8 @@ package sample.DBClasses;
 
 public class Sprzedawca {
 
+    public static Integer id = 6;
+
     private Integer id_sprzedawca;
     private String imie;
     private String nazwisko;

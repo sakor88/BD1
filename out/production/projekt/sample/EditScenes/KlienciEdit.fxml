@@ -13,10 +13,10 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="225.0" layoutY="127.0" />
-      <TextField layoutX="225.0" layoutY="197.0" />
-      <TextField layoutX="225.0" layoutY="269.0" />
-      <TextField layoutX="225.0" layoutY="345.0" />
+      <TextField fx:id="klientImieTF" layoutX="225.0" layoutY="127.0" />
+      <TextField fx:id="klientNazwiskoTF" layoutX="225.0" layoutY="197.0" />
+      <TextField fx:id="klientTelefonTF" layoutX="225.0" layoutY="269.0" />
+      <TextField fx:id="klientEmailTF" layoutX="225.0" layoutY="345.0" />
       <Label layoutX="282.0" layoutY="97.0" prefHeight="20.0" prefWidth="35.0" text="Imie" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />

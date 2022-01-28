@@ -13,9 +13,9 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="227.0" layoutY="283.0" />
-      <TextField layoutX="227.0" layoutY="353.0" />
-      <TextField layoutX="225.0" layoutY="425.0" />
+      <TextField fx:id="zamNowIdKlientTF" layoutX="227.0" layoutY="283.0" />
+      <TextField fx:id="zamNowIdSprzedawcaTF" layoutX="227.0" layoutY="353.0" />
+      <TextField fx:id="zamNowDataTF" layoutX="225.0" layoutY="425.0" />
       <Label layoutX="270.0" layoutY="254.0" prefHeight="20.0" prefWidth="68.0" text="id_klient" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
@@ -41,13 +41,13 @@
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Button>
-      <TextField layoutX="225.0" layoutY="500.0" />
+      <TextField fx:id="zamNowCenaTF" layoutX="225.0" layoutY="500.0" />
       <Label layoutX="282.0" layoutY="471.0" prefHeight="20.0" prefWidth="39.0" text="Cena" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="225.0" layoutY="573.0" />
+      <TextField fx:id="zamNowIdSamNowTF" layoutX="225.0" layoutY="573.0" />
       <Label layoutX="227.0" layoutY="545.0" prefHeight="20.0" prefWidth="149.0" text="id_samochod_nowy" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />

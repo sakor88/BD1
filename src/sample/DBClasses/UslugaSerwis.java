@@ -2,6 +2,8 @@ package sample.DBClasses;
 
 public class UslugaSerwis {
 
+    public static Integer id = 6;
+
     private Integer id_usluga;
     private String nazwa;
     private float czas_uslugi;

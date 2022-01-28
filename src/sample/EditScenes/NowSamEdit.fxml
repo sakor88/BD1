@@ -13,9 +13,9 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="225.0" layoutY="127.0" />
-      <TextField layoutX="225.0" layoutY="197.0" />
-      <TextField layoutX="225.0" layoutY="269.0" />
+      <TextField fx:id="samNowIdWypTF" layoutX="225.0" layoutY="127.0" />
+      <TextField fx:id="samNowModelTF" layoutX="225.0" layoutY="197.0" />
+      <TextField fx:id="samNowMarkaTF" layoutX="225.0" layoutY="269.0" />
       <Label layoutX="238.0" layoutY="99.0" prefHeight="20.0" prefWidth="124.0" text="id_wyposażenie" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />

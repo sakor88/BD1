@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -11,5 +13,39 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
+      <TextField fx:id="uslSerwNazwaTF" layoutX="225.0" layoutY="197.0" />
+      <TextField fx:id="uslSerwCzasTF" layoutX="225.0" layoutY="269.0" />
+      <Label layoutX="248.0" layoutY="166.0" prefHeight="20.0" prefWidth="104.0" text="Nazwa usługi" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="242.0" prefHeight="20.0" prefWidth="198.0" text="Czas usługi (w godzinach)" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="31.0" prefHeight="53.0" prefWidth="413.0" style="-fx-background-color: #62c4c1;" text="Dodaj usługę serwisową" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="254.0" layoutY="500.0" mnemonicParsing="false" onAction="#addUslSerw" style="-fx-background-color: #6434c4;" text="Dodaj" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="uslSerwDataTF" layoutX="225.0" layoutY="345.0" />
+      <TextField fx:id="uslSerwIdSerwisantTF" layoutX="226.0" layoutY="425.0" />
+      <Label layoutX="214.0" layoutY="316.0" prefHeight="20.0" prefWidth="172.0" text="Data (RRRR-MM-DD)" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="394.0" prefHeight="20.0" prefWidth="95.0" text="id_serwisant" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

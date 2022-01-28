@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -9,6 +11,34 @@
       <Button layoutX="162.0" layoutY="830.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="44.0" prefWidth="275.0" style="-fx-background-color: #6434c4;" text="Powrót do ekranu głównego" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="samNowIdWypTF" layoutX="225.0" layoutY="127.0" />
+      <TextField fx:id="samNowModelTF" layoutX="225.0" layoutY="197.0" />
+      <TextField fx:id="samNowMarkaTF" layoutX="225.0" layoutY="269.0" />
+      <Label layoutX="238.0" layoutY="99.0" prefHeight="20.0" prefWidth="124.0" text="id_wyposażenie" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="273.0" layoutY="168.0" prefHeight="20.0" prefWidth="53.0" text="Model" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="243.0" prefHeight="20.0" prefWidth="53.0" text="Marka" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="30.0" prefHeight="53.0" prefWidth="399.0" style="-fx-background-color: #62c4c1;" text="Dodaj nowy samochód" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="253.0" layoutY="330.0" mnemonicParsing="false" onAction="#addNowSam" style="-fx-background-color: #6434c4;" text="Dodaj" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
          </font>
       </Button>
    </children>
