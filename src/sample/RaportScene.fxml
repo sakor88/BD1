@@ -21,17 +21,17 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="189.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport3Scene" prefHeight="80.0" prefWidth="221.0" style="-fx-background-color: #444d4a;" text="Używane samochody &#10;bezwypadkowe &#10;z jednym właścicielem" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="145.0" layoutY="452.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport3Scene" prefHeight="80.0" prefWidth="310.0" style="-fx-background-color: #444d4a;" text="Używane samochody &#10;bezwypadkowe &#10;z jednym właścicielem" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="177.0" layoutY="289.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport2Scene" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #444d4a;" text="Średni czas usługi &#10;w serwisie przypadający &#10;na serwisanta" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="145.0" layoutY="290.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport2Scene" prefHeight="80.0" prefWidth="310.0" style="-fx-background-color: #444d4a;" text="Średni czas usługi &#10;w serwisie przypadający &#10;na serwisanta" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="170.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport1Scene" prefHeight="80.0" prefWidth="259.0" style="-fx-background-color: #444d4a;" text="Klienci, którzy &#10;zamówili nowe auto&#10;w cenie większej niż 150000" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="145.0" layoutY="146.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToRaport1Scene" prefHeight="80.0" prefWidth="310.0" style="-fx-background-color: #444d4a;" text="Klienci, którzy &#10;zamówili nowe auto&#10;w cenie większej niż 150000" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>

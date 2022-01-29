@@ -16,17 +16,17 @@
       <TextField layoutX="225.0" layoutY="127.0" />
       <TextField layoutX="225.0" layoutY="197.0" />
       <TextField layoutX="225.0" layoutY="269.0" />
-      <Label layoutX="258.0" layoutY="99.0" prefHeight="20.0" prefWidth="87.0" text="Kod silnika" textFill="WHITE">
+      <Label layoutX="247.0" layoutY="100.0" prefHeight="20.0" prefWidth="106.0" text="Kod silnika" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="281.0" layoutY="168.0" prefHeight="20.0" prefWidth="40.0" text="Moc" textFill="WHITE">
+      <Label layoutX="270.0" layoutY="166.0" prefHeight="20.0" prefWidth="63.0" text="Moc" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="243.0" prefHeight="20.0" prefWidth="124.0" text="Skrzynia biegów" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="243.0" prefHeight="20.0" prefWidth="141.0" text="Skrzynia biegów" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
@@ -43,12 +43,12 @@
       </Button>
       <TextField layoutX="225.0" layoutY="345.0" />
       <TextField layoutX="226.0" layoutY="425.0" />
-      <Label layoutX="256.0" layoutY="317.0" prefHeight="20.0" prefWidth="87.0" text="Pojemność" textFill="WHITE">
+      <Label layoutX="256.0" layoutY="317.0" prefHeight="20.0" prefWidth="106.0" text="Pojemność" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="231.0" layoutY="394.0" prefHeight="20.0" prefWidth="141.0" text="Moment obrotowy" textFill="WHITE">
+      <Label layoutX="231.0" layoutY="394.0" prefHeight="20.0" prefWidth="162.0" text="Moment obrotowy" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>

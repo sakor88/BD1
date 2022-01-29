@@ -16,22 +16,22 @@
       <TextField fx:id="zamNowIdKlientTF" layoutX="227.0" layoutY="283.0" />
       <TextField fx:id="zamNowIdSprzedawcaTF" layoutX="227.0" layoutY="353.0" />
       <TextField fx:id="zamNowDataTF" layoutX="225.0" layoutY="425.0" />
-      <Label layoutX="270.0" layoutY="254.0" prefHeight="20.0" prefWidth="68.0" text="id_klient" textFill="WHITE">
+      <Label layoutX="270.0" layoutY="254.0" prefHeight="20.0" prefWidth="85.0" text="id_klient" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="247.0" layoutY="325.0" prefHeight="20.0" prefWidth="115.0" text="id_sprzedawca" textFill="WHITE">
+      <Label layoutX="247.0" layoutY="325.0" prefHeight="20.0" prefWidth="149.0" text="id_sprzedawca" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="181.0" layoutY="398.0" prefHeight="20.0" prefWidth="248.0" text="Data realizacji (RRRR-MM-DD)" textFill="WHITE">
+      <Label layoutX="181.0" layoutY="398.0" prefHeight="20.0" prefWidth="287.0" text="Data realizacji (RRRR-MM-DD)" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="139.0" layoutY="32.0" prefHeight="155.0" prefWidth="325.0" style="-fx-background-color: #62c4c1;" text="Dodaj zamówienie &#10;na nowy &#10;samochód" textAlignment="CENTER">
+      <Label layoutX="139.0" layoutY="32.0" prefHeight="155.0" prefWidth="400.0" style="-fx-background-color: #62c4c1;" text="Dodaj zamówienie &#10;na nowy &#10;samochód" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
@@ -42,13 +42,13 @@
          </font>
       </Button>
       <TextField fx:id="zamNowCenaTF" layoutX="225.0" layoutY="500.0" />
-      <Label layoutX="282.0" layoutY="471.0" prefHeight="20.0" prefWidth="39.0" text="Cena" textFill="WHITE">
+      <Label layoutX="282.0" layoutY="471.0" prefHeight="20.0" prefWidth="67.0" text="Cena" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
       <TextField fx:id="zamNowIdSamNowTF" layoutX="225.0" layoutY="573.0" />
-      <Label layoutX="227.0" layoutY="545.0" prefHeight="20.0" prefWidth="149.0" text="id_samochod_nowy" textFill="WHITE">
+      <Label layoutX="227.0" layoutY="545.0" prefHeight="20.0" prefWidth="179.0" text="id_samochod_nowy" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>

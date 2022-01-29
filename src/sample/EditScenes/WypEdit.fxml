@@ -15,17 +15,17 @@
       </Button>
       <TextField fx:id="wypIdNapedTF" layoutX="225.0" layoutY="127.0" />
       <TextField fx:id="wypWersjaTF" layoutX="225.0" layoutY="197.0" />
-      <Label layoutX="258.0" layoutY="99.0" prefHeight="20.0" prefWidth="87.0" text="id_naped" textFill="WHITE">
+      <Label layoutX="258.0" layoutY="99.0" prefHeight="20.0" prefWidth="103.0" text="id_naped" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="220.0" layoutY="170.0" prefHeight="20.0" prefWidth="163.0" text="Wersja_wyposażenia" textFill="WHITE">
+      <Label layoutX="220.0" layoutY="170.0" prefHeight="20.0" prefWidth="206.0" text="Wersja_wyposażenia" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="132.0" layoutY="30.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-color: #62c4c1;" text="Dodaj wyposażenie" textAlignment="CENTER">
+      <Label layoutX="108.0" layoutY="30.0" prefHeight="53.0" prefWidth="418.0" style="-fx-background-color: #62c4c1;" text="Dodaj wyposażenie" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>

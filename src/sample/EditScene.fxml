@@ -21,22 +21,22 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="465.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNowZamEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Zamówienia&#10;na nowy &#10;samochód" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="465.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNowZamEditScene" prefHeight="80.0" prefWidth="178.0" style="-fx-background-color: #444d4a;" text="Zamówienia&#10;na nowy &#10;samochód" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="297.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToUslSerwEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Usługi&#10;serwisowe" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="280.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToUslSerwEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Usługi&#10;serwisowe" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="125.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSamSerwEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;w serwisie" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="86.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSamSerwEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;w serwisie" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="464.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNapedEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Zespoły &#10;napędowe" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="464.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToNapedEditScene" prefHeight="80.0" prefWidth="178.0" style="-fx-background-color: #444d4a;" text="Zespoły &#10;napędowe" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -46,27 +46,27 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="126.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToUzywSamEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;używane" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="87.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToUzywSamEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Samochody &#10;używane" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="467.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSerwisanciEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Serwisanci" textFill="WHITE">
+      <Button layoutX="467.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSerwisanciEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Serwisanci" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="299.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSprzedawcyEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Sprzedawcy" textFill="WHITE">
+      <Button layoutX="280.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSprzedawcyEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Sprzedawcy" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="127.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToKlienciEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Klienci" textFill="WHITE">
+      <Button layoutX="88.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToKlienciEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Klienci" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="298.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToWypEditScene" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #444d4a;" text="Pakiety &#10;wyposażenia&#10;" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="280.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToWypEditScene" prefHeight="80.0" prefWidth="169.0" style="-fx-background-color: #444d4a;" text="Pakiety &#10;wyposażenia&#10;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
