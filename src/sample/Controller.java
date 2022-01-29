@@ -42,6 +42,8 @@ public class Controller {
 
         Connection conn = null;
 
+        // ------------------ MIEJSCE W KTÓRYM PODAJEMY URL USERNAME I PASSWORD DO NASZEJ BAZY! --------------------
+
         try {
             String url = "jdbc:postgresql://tyke.db.elephantsql.com:5432/btzzzahi";
             String username = "btzzzahi";
@@ -1076,7 +1078,7 @@ public class Controller {
     }
 
     public void switchToNowZamEditScene(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("./EditScenes/NowSamEdit.fxml"));
+        root = FXMLLoader.load(getClass().getResource("./EditScenes/NowZamEdit.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -1295,6 +1297,7 @@ public class Controller {
 
     }
 
+    // -------------- Metody add -----------------
 
     public void addKlient(ActionEvent event) throws IOException{
 
@@ -1302,9 +1305,9 @@ public class Controller {
 
         String query = "INSERT INTO projekt.klient VALUES("  + klient.getId_klient()  + ",'" +  klient.getImie() + "'," + "'" + klient.getNazwisko() + "'," + "'" + klient.getTelefon() + "'," + "'" + klient.getEmail() + "');";
         System.out.println(query);
-        //executeQuery(query);
+        executeQuery(query);
 
-        //Klient.id++;
+        Klient.id++;
     }
 
 
@@ -1315,9 +1318,9 @@ public class Controller {
 
         String query = "INSERT INTO projekt.serwisant VALUES(" + serwisant.getId_serwisant() + ",'"  +  serwisant.getImie() + "'," + "'" + serwisant.getNazwisko() + "'," + "'" + serwisant.getTelefon() + "'," + "'" + serwisant.getEmail() + "');";
         System.out.println(query);
-        //executeQuery(query);
+        executeQuery(query);
 
-        //Serwisant.id++;
+        Serwisant.id++;
 
     }
 
@@ -1327,9 +1330,9 @@ public class Controller {
 
         String query = "INSERT INTO projekt.sprzedawca VALUES(" + sprzedawca.getId_sprzedawca() + ",'"  +  sprzedawca.getImie() + "'," + "'" + sprzedawca.getNazwisko() + "'," + "'" + sprzedawca.getTelefon() + "'," + "'" + sprzedawca.getEmail() + "\');";
         System.out.println(query);
-        //executeQuery(query);
+        executeQuery(query);
 
-        //Sprzedawca.id++;
+        Sprzedawca.id++;
 
 
     }
@@ -1340,9 +1343,9 @@ public class Controller {
 
         String query = "INSERT INTO projekt.naped VALUES(" + naped.getId_naped() + ",'"  +  naped.getKod_silnika() + "'," +  naped.getMoc()   + ",'" + naped.getSkrzynia_biegow() + "'," + naped.getPojemnosc() + "," + naped.getMoment_obrotowy() + ");";
         System.out.println(query);
-        //executeQuery(query);
+        executeQuery(query);
 
-        //Naped.id++;
+        Naped.id++;
 
     }
 
@@ -1352,9 +1355,9 @@ public class Controller {
 
         String query = "INSERT INTO projekt.zamowienie_nowe VALUES(" +  zamowienieNowe.getId_zam_nowe() + "," + zamowienieNowe.getId_klient()  + "," +  zamowienieNowe.getId_sprzedawca()   + ",'" + zamowienieNowe.getData_realizacji() + "'," + zamowienieNowe.getCena() + ");";
         System.out.println(query);
-        //executeQuery(query);
+        executeQuery(query);
 
-        //ZamowienieNowe.id++;
+        ZamowienieNowe.id++;
 
 
     }
@@ -1365,9 +1368,9 @@ public class Controller {
 
         String query = "INSERT INTO projekt.samochod_nowy VALUES(" +  samochodNowy.getId_samochod_nowy() + "," + samochodNowy.getId_wyposazenie()  + ",'" +  samochodNowy.getModel()   + "','" + samochodNowy.getMarka() + "');";
         System.out.println(query);
-        //executeQuery(query);
+        executeQuery(query);
 
-        //SamochodNowy.id++;
+        SamochodNowy.id++;
 
     }
 
@@ -1381,10 +1384,10 @@ public class Controller {
         System.out.println(query);
         System.out.println(query1);
 
-        //executeQuery(query);
-        //executeQuery(query1);
+        executeQuery(query);
+        executeQuery(query1);
 
-        //SamochodSerwis.id++;
+        SamochodSerwis.id++;
 
     }
 
@@ -1398,10 +1401,10 @@ public class Controller {
         System.out.println(query);
         System.out.println(query1);
 
-        //executeQuery(query);
-        //executeQuery(query1);
+        executeQuery(query);
+        executeQuery(query1);
 
-        //UslugaSerwis.id++;
+        UslugaSerwis.id++;
 
     }
 
@@ -1413,9 +1416,9 @@ public class Controller {
 
         System.out.println(query);
 
-        //executeQuery(query);
+        executeQuery(query);
 
-        //Wyposazenie.id++;
+        Wyposazenie.id++;
 
     }
 
@@ -1429,10 +1432,10 @@ public class Controller {
         System.out.println(query);
         System.out.println(query1);
 
-        //executeQuery(query);
-        //executeQuery(query1);
+        executeQuery(query);
+        executeQuery(query1);
 
-        //SamochodUzywany.id++;
+        SamochodUzywany.id++;
 
     }
 
